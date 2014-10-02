@@ -1,19 +1,6 @@
 __author__ = 'jacobritenour'
 
 
-#print "hello world!!"
-
-#one line comment
-
-'''
-multiple lines of comments
-'''
-
-first_name = "Kermit"
-last_name = " the Frog"
-
-#print first_name + last_name
-
 response = raw_input("Please enter your name: ")
 response1 = raw_input("Please enter your age: ")
 response2 = raw_input("Please enter a number between 1-15: ")
@@ -24,19 +11,10 @@ response6 = raw_input("Are you married? Yes or No: ")
 response7 = raw_input("Do you have children? Yes or No: ")
 
 
-print response
-print "Hello there, ", response
-print response1
-print response2
-print response3
-print response4
-print response5
-print response6
-print response7
 
 
-birth_year = 1986
-current_year = 2014
-age = current_year - birth_year
-#print age
+
+
+
+
 
