@@ -24,12 +24,12 @@ class MainHandler(webapp2.RequestHandler): #making a class
 </html>'''
         if self.request.GET:
             #stores info that came from the form to be used later
-            user =  self.request.GET['username']
-            email =  self.request.GET['email']
-            dob =  self.request.GET['dob']
-            self.response.write(page_head + user + '' + email + page_body + page_end)
+            user = self.request.GET['username']
+            email = self.request.GET['email']
+            dob = self.request.GET['dob']
+            self.response.write(page_head + user + '' + email + '' + dob + page_end) #this will display the info placed in but not the body
         else:
-            self.response.write(page_head + page_body + page_end) #Printing the info
+            self.response.write(page_head + page_body + page_end) #Printing the info this will display every as normal
 
 
 #do not touch
