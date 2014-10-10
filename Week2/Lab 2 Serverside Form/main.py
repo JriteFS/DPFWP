@@ -20,6 +20,7 @@ class MainHandler(webapp2.RequestHandler): #making a class
     <body>
     <h1 style="background:brown; text:white; text-align:center;">OrderAFish.Org</h1>
     <h3 style="background:brown; text:white; text-align:center;">We have exotic and domestic fishes from around the world!!</h3>
+    <h3 style="background:brown; text:white; text-align:center;">Fill out the form below and you too can become the owner of a random fish!!!</h3>
     '''
         page_body = '''<form method="GET">
             <label>Name</label><input type="text" name="username" />
@@ -59,7 +60,7 @@ class MainHandler(webapp2.RequestHandler): #making a class
                                 + dob + ''
                                 + address + ''
                                 + city + ''
-                                + state + ''
+                                + state + ''#i am hoping this select drop down works
                                 + page_end) #this will display the info placed in but not the body
         else:
             self.response.write(page_head + page_body + page_end) #Printing the info this will display every as normal
