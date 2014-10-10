@@ -24,3 +24,7 @@ class MainHandler(webapp2.RequestHandler): #making a class
             <label>Date of Birth</label><input type="text" name="dob" />
             <label>Email</label><input type="text" name="email" />
             <input type="submit" value="Submit" />'''
+                page_end = '''
+        </form>
+    </body>
+</html>'''
