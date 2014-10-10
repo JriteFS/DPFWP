@@ -44,6 +44,8 @@ class MainHandler(webapp2.RequestHandler): #making a class
             <input type="submit" value="Submit" />'''
         page_end = '''
         </form>
+        <p style="background:brown; text:white; text-align:center;">We hope you enjoy your Fish!!</p>
+        <footer style="background:brown; text:white;">Be Aware that one of our personnel when be sending you an email to verify the available living space and your ability to care for this animal. They may also make a home visit just to ensure the safety of all wildlife handled by our organization. If you refuse to allow our personnel we can/will deny you from being the proud parent of an amazing creature of the sea.</footer>
     </body>
 </html>'''
         if self.request.GET:
@@ -70,3 +72,7 @@ class MainHandler(webapp2.RequestHandler): #making a class
 app = webapp2.WSGIApplication([
     ('/',MainHandler)
 ], debug=True)
+
+'''
+I really hope this works if are able to open it with the google app engine. I had made a comment back to you and didnt receive anything back.
+'''
