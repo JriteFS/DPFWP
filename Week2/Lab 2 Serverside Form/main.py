@@ -15,7 +15,7 @@ class MainHandler(webapp2.RequestHandler): #making a class
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Simple Form</title>
+        <title>Simple Form Assignment</title>
     </head>
     <body>'''
         page_body = '''<form method="GET">
