@@ -3,11 +3,13 @@ __author__ = 'jacobritenour'
 
 import webapp2
 from lib import MovieData, FavoriteMovies
-from page import ResultsPage
+from page import FormPage, ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
 
+        #page for form
+        f = FormPage()
 
         #page for class
         p = ResultsPage()

@@ -1,17 +1,17 @@
 __author__ = 'jacobritenour'
 
 
-class FavoriteMovies(object):
+class FavoriteCars(object):
     def __init__(self):
-        self.__movie_list = []
+        self.__car_list = []
 
     def add_movie(self, m):
-        self.__movie_list.append(m)
+        self.__car_list.append(m)
 
     def compile_list(self):
         output = ''
-        for movie in self.__movie_list: #for each of the movies added
-            output += 'Title: ' + movie.title + ' (' + str(movie.year) + ') Directed By: ' + movie.director +' <br />'
+        for car in self.__car_list: #for each of the movies added
+            output += 'Make: ' + car.make + ' (' + str(car.year) + ') Model: ' + car.model +' <br />'
         return output
 
 
@@ -21,8 +21,8 @@ class FavoriteMovies(object):
         '''
         #years
         years = []
-        for movie in self.__movie_list:
-            years.append(movie.year)
+        for car in self.__car_list:
+            years.append(car.year)
 
         #sort years from High to Low
         years.sort()
@@ -30,7 +30,7 @@ class FavoriteMovies(object):
         #subtract the low years from the high year
         num = len(years) - 1 #oldest year
         span = years[num] - years[0] #highest years - lowest years
-        return 'The number of between the oldest and newest movie is ' + str(span)
+        return 'The number of years between the oldest and newest cars is ' + str(span)
         #return the span of time
     #have an array to hold the movie info
     #some way to add to that array
@@ -38,15 +38,15 @@ class FavoriteMovies(object):
     #calculate time span between movies
 
     @property
-    def movie_list(self):
-        return self.__movie_list
+    def car_list(self):
+        return self.__car_list
 
 
-class MovieData(object): #data Object
+class CarData(object): #data Object
     def __init__(self):
-        self.title = ''
+        self.make = ''
         self.__year = 0 #check for valid year
-        self.director = ''
+        self.model = ''
 
     @property
     def year(self):
@@ -54,8 +54,8 @@ class MovieData(object): #data Object
 
     @year.setter
     def year(self, y):
-        if y > 2014:
+        if y > 2015:
             print "Error, Invalid Year!!!" #going to give an error if over 2014
-            self.__year = 2014
+            self.__year = 2015
         else:
             self.__year = y #will apply the date given
