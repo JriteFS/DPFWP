@@ -26,4 +26,4 @@ class ResultsPage(object):#produce the results pages
 
     def print_out(self):
         all = self.__head + self.body + self.__error + self.__close
-        return all#should show everything listed one after the other. 
+        return all#should show everything listed one after the other.
