@@ -16,7 +16,7 @@ class MainHandler(webapp2.RequestHandler):
         #page for form
         f = FormPage()
 
-#I am not sure this will work correctly please advise on hwo i can correct it. 
+#I am not sure this will work correctly please advise on hwo i can correct it.
 class FormPage(object):
     def get(self): #attempting this function that is going to make everything work
 
@@ -44,7 +44,7 @@ class FormPage(object):
         <footer>If you wish to continue to save your list make sure you save the link above.</footer>
     </body>
 </html>'''
-        cd = CarData()
+        cd = CarData()#calling car data info
         if self.request.GET:
             #stores info that came from the form to be used later
             cd.make = self.request.GET['make']#add this to the array
