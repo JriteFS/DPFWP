@@ -3,7 +3,7 @@ __author__ = 'jacobritenour'
 
 
 
-class ResultsPage(object):
+class ResultsPage(object):#produce the results pages
     def __init__(self):
         self.__title = "Welcome!"
         self.css = "css.styles.css"
@@ -26,4 +26,4 @@ class ResultsPage(object):
 
     def print_out(self):
         all = self.__head + self.body + self.__error + self.__close
-        return all
+        return all#should show everything listed one after the other. 
