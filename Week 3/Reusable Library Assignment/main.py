@@ -6,9 +6,9 @@ Jacob Ritenour
 DPFWP
 Reusable Library Assignment
 '''
-import webapp2
-from lib import CarData, FavoriteCars
-from page import ResultsPage
+import webapp2 #how do I get this?
+from lib import CarData, FavoriteCars # importing from the other 2 py pages
+from page import ResultsPage #importing to report the resultes
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -18,7 +18,7 @@ class MainHandler(webapp2.RequestHandler):
 
 
 class FormPage(object):
-    def get(self): #function that is going to make everything work
+    def get(self): #attempting this function that is going to make everything work
 
         fmlib = FavoriteCars()
         form_top = '''
@@ -33,28 +33,30 @@ class FormPage(object):
     <h3 style="text-align:center;">Fill out the form below and begin today!!!</h3>
     '''
         form_mid = '''<form method="GET">
-            <label>make</label><input type="text" name="make" />
+            <label>make</label><input type="text" name="make" /> #collect make
             <label>Model</label><input type="text" name="model" />
             <label>Year</label><input type="number" name="year" />
             <input type="submit" value="Submit" />'''
         form_end = '''
         </form>
+        <footer>If you wish to continue to save your list make sure you save the link above.</footer>
     </body>
 </html>'''
+        cd = CarData()
         if self.request.GET:
             #stores info that came from the form to be used later
-            make = self.request.GET['make']#add this to the array
-            model = self.request.GET['model']
-            year = self.request.GET['year']
-            fmlib.add_car(make,model,year)
+            cd.make = self.request.GET['make']#add this to the array
+            cd.model = self.request.GET['model']
+            cd.year = self.request.GET['year']
+            fmlib.add_car(cd.make,cd.model,cd.year)#to store all info given
 
 
 
         #page for class
         p = ResultsPage()
 
-        p.body = fmlib.compile_list() + fmlib.calc_time_span()
-        self.response.write(p.print_out())
+        p.body = fmlib.compile_list() + fmlib.calc_time_span() #to show the given info plus the added utility
+        self.response.write(p.print_out())# print all
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
