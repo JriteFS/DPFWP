@@ -5,7 +5,7 @@ class FavoriteCars(object):
     def __init__(self):
         self.__car_list = []
 
-    def add_movie(self, m):
+    def add_car(self, m):
         self.__car_list.append(m)
 
     def compile_list(self):

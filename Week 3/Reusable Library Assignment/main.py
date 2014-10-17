@@ -2,7 +2,7 @@ __author__ = 'jacobritenour'
 
 
 import webapp2
-from lib import MovieData, FavoriteMovies
+from lib import CarData, FavoriteCars
 from page import FormPage, ResultsPage
 
 class MainHandler(webapp2.RequestHandler):
@@ -13,19 +13,19 @@ class MainHandler(webapp2.RequestHandler):
 
         #page for class
         p = ResultsPage()
-        fmlib = FavoriteMovies()
+        fmlib = FavoriteCars()
 
-        md1 = MovieData()#calling the class
+        md1 = CarData()#calling the class
         md1.title = "The Princess Bride"
         md1.year = 1989 #going to call a function
         md1.director = "Rob Reiner"
-        fmlib.add_movie(md1)
+        fmlib.add_car(md1)
 
-        md2 = MovieData()#calling the class
+        md2 = CarData()#calling the class
         md2.title = "Dune"
         md2.year = 1986 #going to call a function
         md2.director = "David Lynch"
-        fmlib.add_movie(md2)
+        fmlib.add_car(md2)
 
        #movie title
         #year movie was made
