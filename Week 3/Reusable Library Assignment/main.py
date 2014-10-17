@@ -10,7 +10,8 @@ class MainHandler(webapp2.RequestHandler):
 
         #page for form
         f = FormPage()
-        self.get()
+        f.
+
         #page for class
         p = ResultsPage()
         fmlib = FavoriteCars()
