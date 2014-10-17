@@ -9,7 +9,7 @@ class ResultsPage(object):
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title></title>
+        <title>Please enter your information:</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
