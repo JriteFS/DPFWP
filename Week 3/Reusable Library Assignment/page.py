@@ -1,6 +1,6 @@
 __author__ = 'jacobritenour'
 
-
+#I attempted to add the form to this page but i do not know how to call it and generate it. Please advise so i can correct my code.
 
 
 class ResultsPage(object):#produce the results pages
