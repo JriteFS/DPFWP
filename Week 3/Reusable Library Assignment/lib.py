@@ -37,6 +37,9 @@ class FavoriteMovies(object):
     #some way to generate a list of all movies
     #calculate time span between movies
 
+    @property
+    def movie_list(self):
+        return self.__movie_list
 
 
 class MovieData(object): #data Object
