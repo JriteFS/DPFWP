@@ -26,12 +26,11 @@ class FormPage(object):
 </html>'''
         if self.request.GET:
             #stores info that came from the form to be used later
-            user = self.request.GET['username']
-            email = self.request.GET['email']
-            dob = self.request.GET['dob']
-            address = self.request.GET['address1']
-            city = self.request.GET['city']
-            state = self.request.GET['state']# i am not sure if this is going to work but i cant really test it due to no google app engine
+            make = self.request.GET['make']
+            model = self.request.GET['model']
+            year = self.request.GET['year']
+
+
             self.response.write(page_head #listing everything i want to show
                                 + user + ''
                                 + email + ''
