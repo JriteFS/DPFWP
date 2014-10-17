@@ -21,6 +21,8 @@ class FormPage(object):
     def get(self): #attempting this function that is going to make everything work
 
         fmlib = FavoriteCars()
+
+        #form to collect make, model, amd year of vehicle
         form_top = '''
 <!DOCTYPE HTML>
 <html style="background: tan; max-width: 960px; margin:0 auto;">
@@ -33,7 +35,7 @@ class FormPage(object):
     <h3 style="text-align:center;">Fill out the form below and begin today!!!</h3>
     '''
         form_mid = '''<form method="GET">
-            <label>make</label><input type="text" name="make" /> #collect make
+            <label>make</label><input type="text" name="make" />
             <label>Model</label><input type="text" name="model" />
             <label>Year</label><input type="number" name="year" />
             <input type="submit" value="Submit" />'''
