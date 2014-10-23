@@ -8,3 +8,5 @@ class DataObject(object):#created the class for data object
         self.food = ""
         self.reproduce = ""
         self.life_span = ""
+        self.main_ability = ""
+        self.weakness = ""
