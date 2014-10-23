@@ -16,7 +16,7 @@ class MainHandler(webapp2.RequestHandler):
         #page for form
         f = FormPage()
 
-#I am not sure this will work correctly please advise on hwo i can correct it.
+#I am not sure this will work correctly please advise on how  i can correct it.
 class FormPage(object):
     def get(self): #attempting this function that is going to make everything work
 
