@@ -15,3 +15,5 @@ class Page(object):#adding Page class to load initial page
         self._close = '''
     </body>
 </html>'''
+    def print_initial(self):
+        return self._head + self._body + self._close
