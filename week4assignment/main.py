@@ -14,6 +14,23 @@ class MainHandler(webapp2.RequestHandler):
 
         p = Page()# created instance of Page
         d = DataObject() #created instance of Data Object
+
+
+        werewolf = DataObject()
+
+
+        vampire = DataObject()
+
+
+        mermaid = DataObject()
+
+
+        witch = DataObject()
+
+
+
+
+
         self.response.write(p.print_initial())
 
 
