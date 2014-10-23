@@ -11,8 +11,8 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
 
         p = Page()# created instance of Page
-        self.response.write(p.)
-        print
+        self.response.write(p.print_initial())
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
