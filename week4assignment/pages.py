@@ -1,13 +1,17 @@
 __author__ = 'jacobritenour'
 
+from data import DataObject
 
 class Page(object):#adding Page class to load initial page
     def __init__(self):
+        self.title = ""
+        self.css = "css/main.css"
         self._head = '''
 <!DOCTYPE HTML>
 <html>
     <head>
         <title>Types of SuperNatural Beings</title>
+        <link href = "{self.css}" rel = "stylesheet" type = "text/css" />
     </head>
     <body>
         <h1>What Type of Super-Natural Being do You Relate Too?</h1>
@@ -22,4 +26,17 @@ class Page(object):#adding Page class to load initial page
     </body>
 </html>'''
     def print_initial(self):
-        return self._head + self._body + self._close
+        all = self._head + self._body + self._close
+        all = all.format(**locals())
+        return all
+
+class PageContent(Page):
+    def __init__(self):
+        super(Page, self).__init__()
+
+        self.do =DataObject()
+
+    def print_initial(self):
+        all = self._head + self._body + self._close
+        all = all.format(**locals())
+        return all
