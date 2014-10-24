@@ -13,4 +13,4 @@ class DataObject(object):#created the class for data object
         self.weakness = ""
 
     def print_types(self):
-        return
+        return "Do you resemble a " + self.name
