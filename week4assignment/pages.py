@@ -1,6 +1,6 @@
 __author__ = 'jacobritenour'
 
-from data import DataObject
+from data import Data, DataObject
 
 class Page(object):#adding Page class to load initial page
     def __init__(self):
@@ -34,7 +34,10 @@ class PageContent(Page):
     def __init__(self):
         super(Page, self).__init__()
 
-        self.do =DataObject()
+        self.do = DataObject()
+        self.d = Data()
+
+
 
     def print_initial(self):
         all = self._head + self._body + self._close
