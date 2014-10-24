@@ -17,6 +17,7 @@ class MainHandler(webapp2.RequestHandler):
 
 
         werewolf = DataObject()
+        werewolf.name = "Werewolf"
         werewolf.type = "Shape Shifter"
         werewolf.trigger = "Full Moon"
         werewolf.food = "Mainly meat, but can eat anything almost (see weaknesses)"
@@ -27,6 +28,7 @@ class MainHandler(webapp2.RequestHandler):
 
 
         vampire = DataObject()
+        vampire.name = "Vampire"
         vampire.type = "Nocturnal Superbeing"
         vampire.trigger = "Being Bitten - Sustained"
         vampire.food = "Blood"
@@ -36,28 +38,39 @@ class MainHandler(webapp2.RequestHandler):
         vampire.weakness = "The sun lights them on fire. A stake to the heart, cutting off their head, or ripping their heart out will kill them."
 
         mermaid = DataObject()
-        mermaid.type = ""
-        mermaid.trigger = ""
-        mermaid.food = ""
-        mermaid.reproduce = ""
-        mermaid.life_span = ""
-        mermaid.main_ability = ""
-        mermaid.weakness = ""
+        mermaid.name = "Mermaid/Merman"
+        mermaid.type = "Sea Creature"
+        mermaid.trigger = "None"
+        mermaid.food = "The Souls of lost sailors"
+        mermaid.reproduce = "Natural means"
+        mermaid.life_span = "Unknown"
+        mermaid.main_ability = "Speak to other sea life. Underwater breathing, swim speed increased. hypnotizing voice."
+        mermaid.weakness = "Fire, others unknown"
 
         witch = DataObject()
-        witch.type = ""
+        witch.name = "Witch/Warlock"
+        witch.type = "Human"
         witch.trigger = ""
-        witch.food = ""
-        witch.reproduce = ""
-        witch.life_span = ""
-        witch.main_ability = ""
-        witch.weakness = ""
+        witch.food = "Normal human food."
+        witch.reproduce = "Natural means"
+        witch.life_span = "70-90 yrs on average unless altered by a spell"
+        witch.main_ability = "The ability to cast spells simple and complicated. The more witches the more powerful the spell that can be cast. Able to draw on the power of the deceased witches of their family line. "
+        witch.weakness = "Fragile due to being human. This type has a very strong family bond that can be exploited."
 
+        fairy = DataObject()
+        fairy.name = "Fairy"
+        fairy.type = "Mystic"
+        fairy.trigger = "None"
+        fairy.food = "Nature food, plants mostly"
+        fairy.reproduce = "Natural means"
+        fairy.life_span = "Unknown"
+        fairy.main_ability = "The ability to fly. Sometimes fairies have a dust they use or the have a light that comes from their palms. Sometimes able to have foresight."
+        fairy.weakness = "Can be fragile but some are very resilient. They need a place to store this dust or power."
 
 
 
         self.response.write(p.print_initial())
-
+        self.responce.write(d.print())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
