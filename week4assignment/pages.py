@@ -18,8 +18,13 @@ class Page(object):#adding Page class to load initial page
         <section>
             <p>There are many types of different supernatural beings that have been thought up through out history. Listed below are a few that you can review and see which one you most closely resemble. The abilities of these creatures or beings can range from immortality or shape-shifting to super-speed and the strength of 100 men. There has been such a large imagination on creating different characters that in order to be unique you have to combine several of these abilities. Vampires, Werewolves, Mermaids/Mermen, Witches/Warlocks, and a few others are listed below so you can compare and possibly relate. </p>
         </section>
-
-        <a href=""
+            <ul>
+                <li><a href="url">Werewolf</a></li>
+                <li><a href="url">Vampire</a></li>
+                <li><a href="url">Mermaid</a></li>
+                <li><a href="url">Witch</a></li>
+                <li><a href="url">Fairy</a></li>
+            </ul>
 
     '''
 

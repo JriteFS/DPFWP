@@ -4,10 +4,20 @@
 html {
     max-width: 960px;
     margin: 0 auto;
+    background-color: #FFE0B2;
 
 }
 
 h1 {
-    border-bottom: 2px black;
+    border: 2px black;
 }
 
+ul {
+	min-width: 696px;
+	list-style: none;
+	padding: 20px 50px;
+	align: center;
+	}
+ul li {
+		display: inline;
+	}

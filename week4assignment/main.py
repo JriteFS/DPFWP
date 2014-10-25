@@ -16,7 +16,7 @@ class MainHandler(webapp2.RequestHandler):
         do = DataObject() #created instance of Data Object
         d = Data()
 
-        p.data = d.werewolf.name
+        #p.data = d.werewolf.name
 
         self.response.write(p.print_initial())
         #self.response.write(p.print_types())
