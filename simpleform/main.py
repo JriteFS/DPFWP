@@ -1,25 +1,78 @@
-#!/usr/bin/env python
-#
-# Copyright 2007 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-import webapp2
+__author__ = 'jacobritenour'
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('Hello world!')
+'''
+Jacob Ritenour
+10/9/2014
+DPFWP
+Simple Form
+'''
 
+import webapp2 #using webapp2 library I could not get the Google app engine to download correctly
+
+class MainHandler(webapp2.RequestHandler): #making a class
+    def get(self): #function that is going to make everything work
+        page_head = '''
+<!DOCTYPE HTML>
+<html style="background: tan; max-width: 960px; margin:0 auto;">
+    <head>
+        <title>Simple Form Assignment</title>
+    </head>
+    <body>
+    <h1 style="background:brown; text:white; text-align:center;">OrderAFish.Org</h1>
+    <h3 style="background:brown; text:white; text-align:center;">We have exotic and domestic fishes from around the world!!</h3>
+    <h3 style="background:brown; text:white; text-align:center;">Fill out the form below and you too can become the owner of a random fish!!!</h3>
+    '''
+        page_body = '''<form method="GET">
+            <label>Name</label><input type="text" name="username" />
+            <label>Email</label><input type="text" name="email" />
+            <label>Date of Birth</label><input type="number" name="dob" />
+            <label>Street Address</label><input type="text" name="address1" />
+            <label>City</label><input type="text" name="city" />
+            <label>State</label><select name="state">
+                                    <option>Alabama</option>
+                                    <option>Florida</option>
+                                    <option>Mississippi</option>
+                                    <option>Georgia</option>
+                                    <option>Texas</option>
+                                    <option>Louisana</option>
+                                    <option>Tennessee</option>
+                                    <option>South Carolina</option>
+                                    <option>North Carolina</option>
+                                    <option>Arkansas</option>
+                                    <option>Oklahoma</option>
+                                </select>
+            <input type="submit" value="Submit" />'''
+        page_end = '''
+        </form>
+        <p style="background:brown; text:white; text-align:center;">We hope you enjoy your Fish!!</p>
+        <footer style="background:brown; text:white;">Be Aware that one of our personnel when be sending you an email to verify the available living space and your ability to care for this animal. They may also make a home visit just to ensure the safety of all wildlife handled by our organization. If you refuse to allow our personnel we can/will deny you from being the proud parent of an amazing creature of the sea.</footer>
+    </body>
+</html>'''
+        if self.request.GET:
+            #stores info that came from the form to be used later
+            user = self.request.GET['username']
+            email = self.request.GET['email']
+            dob = self.request.GET['dob']
+            address = self.request.GET['address1']
+            city = self.request.GET['city']
+            state = self.request.GET['state']# i am not sure if this is going to work but i cant really test it due to no google app engine
+            self.response.write(page_head #listing everything i want to show
+                                + user + ''
+                                + email + ''
+                                + dob + ''
+                                + address + ''
+                                + city + ''
+                                + state + ''#i am hoping this select drop down works
+                                + page_end) #this will display the info placed in but not the body
+        else:
+            self.response.write(page_head + page_body + page_end) #Printing the info this will display every as normal
+
+
+#do not touch
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/',MainHandler)
 ], debug=True)
+
+'''
+I really hope this works if are able to open it with the google app engine. I had made a comment back to you and didnt receive anything back.
+'''

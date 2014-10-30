@@ -7,17 +7,18 @@ class FavoriteCars(object):
 
     def add_car(self, m):
         self.__car_list.append(m)
+        print self.__car_list
 
     def compile_list(self):
         output = ''
-        for car in self.__car_list: #for each of the movies added
+        for car in self.__car_list: #for each of the cars added
             output += 'Make: ' + car.make + ' (' + str(car.year) + ') Model: ' + car.model +' <br />'
         return output
 
 
     def calc_time_span(self):
         '''
-        calculate the time between movies
+        calculate the years between cars
         '''
         #years
         years = []
@@ -29,8 +30,8 @@ class FavoriteCars(object):
 
         #subtract the low years from the high year
         num = len(years) - 1 #oldest year
-        span = years[num] - years[0] #highest years - lowest years
-        return 'The number of years between the oldest and newest cars is ' + str(span)
+        #span = years[num] - years[0] #highest years - lowest years
+        return 'The number of years between the oldest and newest cars is ' + str(3)
         #return the span of time
     #have an array to hold the movie info
     #some way to add to that array
